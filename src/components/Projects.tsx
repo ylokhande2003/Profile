@@ -20,20 +20,43 @@ const Projects = () => {
 
   const personalProjects = [
     {
-      title: "Atmayog - Yoga Course Website",
-      description: "Developed a user-friendly yoga course website using PHP. Ensured responsive design for optimal user experience on all devices. Managed user accounts and content through an admin panel.",
+      title: "Animal Safety",
+      description:
+        "A web platform focused on animal welfare, including animal shelters, food, medication, and adoption services. Provides medication recommendations based on animal type, physical condition, and health needs.",
+      tags: ["HTML", "CSS", "JavaScript", "Web Development"],
+      color: "from-green-500/20 to-emerald-500/20",
+      githublink: "https://github.com/ylokhande2003/Animal_safety",
+      link: "https://github.com/ylokhande2003/Animal_safety",
+    },
+    {
+      title: "Atmayoga - Yoga & Wellness Platform",
+      description:
+        "A yoga and wellness website offering guided yoga, exercise, and meditation plans for users of different age groups. Includes separate login dashboards for users and admins with personalized plans based on age, physique, and health.",
       tags: ["PHP", "HTML", "CSS", "Bootstrap", "MySQL", "Xampp"],
-      color: "from-green-500/20 to-teal-500/20",
-      link: "#",
+      color: "from-teal-500/20 to-cyan-500/20",
+      githublink: "https://github.com/ylokhande2003/Atmayog",
+      link: "http://atmayoga.free.nf/?i=1",
     },
     {
       title: "Tweetertube",
-      description: "Built functionalities similar to Twitter and YouTube. Developed CRUD operations and UserContext. Backend deployed on Render and Frontend on Netlify.",
+      description:
+        "A full-stack application inspired by Twitter and YouTube, implementing CRUD operations and user authentication. Backend deployed on Render and frontend hosted on Netlify.",
       tags: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "Axios"],
       color: "from-orange-500/20 to-red-500/20",
-      link: "#",
+      githublink: "https://github.com/ylokhande2003/Tweetertube",
+      link: "https://tweetertube.netlify.app/",
+    },
+    {
+      title: "Movie Library",
+      description:
+        "A React.js based movie listing application that displays movies with a clean UI. The project focuses on frontend performance, reusable components, and modern UI design.",
+      tags: ["React.js", "JavaScript", "API", "Netlify"],
+      color: "from-blue-500/20 to-indigo-500/20",
+      githublink: "https://github.com/ylokhande2003/Movie_Frontend",
+      link: "https://movie-listshow.netlify.app/",
     },
   ];
+
 
   const experience = [
     {
@@ -90,7 +113,9 @@ const Projects = () => {
                         {exp.role}
                       </h3>
                       <p className="text-primary font-medium">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground mb-3">{exp.period}</p>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        {exp.period}
+                      </p>
                       <p className="text-muted-foreground leading-relaxed">
                         {exp.description}
                       </p>
@@ -231,12 +256,24 @@ const Projects = () => {
                     }}
                     transition={{ duration: 0.3 }}
                   >
-                    <button className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground/20 transition-colors">
-                      <Github className="w-4 h-4" />
-                    </button>
-                    <button className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground/20 transition-colors">
-                      <ExternalLink className="w-4 h-4" />
-                    </button>
+                    <a
+                      href={project.githublink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground/20 transition-colors">
+                        <Github className="w-4 h-4" />
+                      </button>
+                    </a>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center hover:bg-foreground/20 transition-colors">
+                        <ExternalLink className="w-4 h-4" />
+                      </button>
+                    </a>
                   </motion.div>
                 </div>
               </div>

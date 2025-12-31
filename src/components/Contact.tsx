@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mail, MapPin, Send, Github, Linkedin, Phone, Code2 } from "lucide-react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const ref = useRef(null);
+  const ref = useRef();
+   const form = useRef();
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const socialLinks = [
@@ -12,6 +14,27 @@ const Contact = () => {
     { icon: Linkedin, href: "https://www.linkedin.com/in/yash-lokhande-34a313227/", label: "LinkedIn" },
     { icon: Code2, href: "https://leetcode.com/u/yashlokhande610/", label: "LeetCode" },
   ];
+
+   const sendEmail = (e) => {
+     e.preventDefault();
+
+     emailjs
+       .sendForm(
+         "service_7q5pyeb",
+         "template_t1qz5bp",
+         form.current,
+         "LekNACnhzoD69gCyA"
+       )
+       .then(
+         (result) => {
+           console.log(result.text);
+         },
+         (error) => {
+           console.log(error.text);
+         }
+       );
+     e.target.reset();
+   };
 
   return (
     <section id="contact" className="py-32 px-6 bg-secondary/30" ref={ref}>
@@ -29,8 +52,8 @@ const Contact = () => {
             Let's work <span className="text-gradient">together</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Have a project in mind or looking for a dedicated developer? 
-            I'd love to hear from you. Let's create something amazing together.
+            Have a project in mind or looking for a dedicated developer? I'd
+            love to hear from you. Let's create something amazing together.
           </p>
         </motion.div>
 
@@ -40,7 +63,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="glass-card p-8 md:p-12 rounded-3xl"
         >
-          <form className="space-y-6">
+          <form className="space-y-6" ref={form} onSubmit={sendEmail}>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium mb-2 text-foreground">
@@ -48,6 +71,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
+                  name="user_name"
                   placeholder="Your Name"
                   className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
                 />
@@ -58,6 +82,7 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
+                  name="user_email"
                   placeholder="your@email.com"
                   className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-foreground placeholder:text-muted-foreground"
                 />
@@ -79,6 +104,7 @@ const Contact = () => {
               </label>
               <textarea
                 rows={5}
+                name="message"
                 placeholder="Tell me about your project..."
                 className="w-full px-4 py-3 bg-secondary/50 border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none text-foreground placeholder:text-muted-foreground"
               />
