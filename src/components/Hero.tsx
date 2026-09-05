@@ -129,7 +129,7 @@ const Hero = () => {
             Get In Touch
           </motion.a>
           <motion.a
-            href="/Yash_Lokhande_Resume.pdf"
+            href="/Yash_Lokhande_FullStack_Resume-1.pdf"
             download
             className="flex items-center gap-2 px-8 py-4 border border-border text-foreground font-semibold rounded-full hover:bg-secondary/50 transition-colors"
             whileHover={{ scale: 1.05 }}
