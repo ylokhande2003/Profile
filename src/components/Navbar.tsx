@@ -56,6 +56,15 @@ const Navbar = () => {
             </motion.a>
           ))}
           <motion.a
+            href="/Yash_Lokhande_Resume.pdf"
+            download
+            className="px-6 py-2.5 border border-border text-foreground font-medium rounded-full text-sm hover:bg-secondary/50 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Resume
+          </motion.a>
+          <motion.a
             href="#contact"
             className="px-6 py-2.5 bg-primary text-primary-foreground font-medium rounded-full text-sm"
             whileHover={{ scale: 1.05 }}
@@ -99,6 +108,14 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+          <a
+            href="/Yash_Lokhande_Resume.pdf"
+            download
+            className="px-6 py-3 border border-border text-foreground font-medium rounded-full text-center"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Resume
+          </a>
           <a
             href="#contact"
             className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-full text-center"

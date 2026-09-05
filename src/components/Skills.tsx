@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code2, Palette, Database, Server, GitBranch, Layers } from "lucide-react";
+import { Code2, Palette, Database, Server, Layers, Plug, TestTube2 } from "lucide-react";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -9,40 +9,46 @@ const Skills = () => {
 
   const skills = [
     {
-      icon: Code2,
-      title: "Programming Languages",
-      description: "Core languages for building robust applications and solving complex problems",
-      tools: ["JavaScript", "TypeScript", "Java", "C", "C++", "PHP"],
-    },
-    {
       icon: Palette,
       title: "Frontend Development",
-      description: "Creating responsive, interactive, and visually appealing user interfaces",
-      tools: ["React.js", "Next.js", "HTML", "CSS", "Bootstrap", "Tailwind CSS"],
+      description: "Building responsive, high-performance user interfaces",
+      tools: ["React.js", "Next.js", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "Ant Design", "Redux Toolkit", "Zustand", "React Query"],
     },
     {
       icon: Server,
       title: "Backend Development",
-      description: "Building scalable server-side applications and RESTful APIs",
-      tools: ["Node.js", "Express.js", "Java Spring Boot", "REST APIs"],
+      description: "Designing scalable, secure server-side systems and APIs",
+      tools: ["Node.js", "Express.js", "Java", "Spring Boot", "Spring MVC", "Spring Security", "Microservices", "JWT / RBAC", "OAuth 2.0", "Hibernate / JPA"],
     },
     {
       icon: Database,
       title: "Databases",
-      description: "Managing and optimizing data storage solutions for applications",
-      tools: ["MySQL", "MongoDB", "MSSQL","PostgreSQL"],
-    },
-    {
-      icon: GitBranch,
-      title: "Version Control",
-      description: "Collaborative development and code management workflows",
-      tools: ["Git", "GitHub", "CI/CD Pipelines"],
+      description: "Schema design, query optimisation & performance tuning",
+      tools: ["MongoDB", "PostgreSQL", "MySQL", "Mongoose", "Indexing", "Aggregation Pipelines"],
     },
     {
       icon: Layers,
       title: "Cloud & DevOps",
-      description: "Deployment, monitoring, and environment management",
-      tools: ["Azure", "Render", "Netlify", "Xampp"],
+      description: "Deployment, containerisation, and infrastructure management",
+      tools: ["Docker", "AWS (EC2, S3)", "Microsoft Azure", "CI/CD", "GitHub Actions", "Kubernetes", "Maven", "Linux", "Tomcat"],
+    },
+    {
+      icon: Plug,
+      title: "API & Integration",
+      description: "Designing and integrating robust API ecosystems",
+      tools: ["REST APIs", "SOAP", "Webhooks", "Swagger / OpenAPI", "Slack API", "MS Teams Bot Framework", "Postman"],
+    },
+    {
+      icon: TestTube2,
+      title: "Testing & Tools",
+      description: "Ensuring quality through rigorous testing practices",
+      tools: ["JUnit", "Jest", "React Testing Library", "Apache JMeter", "Git", "GitHub", "JIRA"],
+    },
+    {
+      icon: Code2,
+      title: "Core Concepts",
+      description: "Foundations that drive maintainable, well-architected software",
+      tools: ["OOP", "SOLID Principles", "MVC Architecture", "Data Structures & Algorithms", "Multi-Tenant Architecture", "SDLC", "Agile/Scrum"],
     },
   ];
 

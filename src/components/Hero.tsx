@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowDown, Phone, Mail, MapPin, Download, Github, Linkedin } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -50,7 +50,7 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary/30 rounded-full backdrop-blur-sm bg-primary/5">
-            🏆 Best Employee Award Winner
+            🏆 Best Employee Award — CoReCo Technologies, 2025
           </span>
         </motion.div>
 
@@ -66,14 +66,24 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-base md:text-lg text-primary/90 font-medium mb-4 tracking-wide"
+        >
+          Full Stack Developer · MERN Stack · Java Spring Boot · Microservices
+        </motion.p>
+
+        <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 font-body"
         >
-          Software Developer specializing in React.js, Next.js, Java Spring Boot 
-          and full-stack development. Building scalable web applications 
-          with clean, maintainable code.
+          Results-driven Full Stack Developer with 2 years of experience building
+          scalable web applications across the MERN stack and Java Spring Boot
+          ecosystems — from multi-tenant microservices to AI-powered content
+          pipelines serving enterprise clients.
         </motion.p>
 
         <motion.div
@@ -117,6 +127,44 @@ const Hero = () => {
             whileTap={{ scale: 0.98 }}
           >
             Get In Touch
+          </motion.a>
+          <motion.a
+            href="/Yash_Lokhande_Resume.pdf"
+            download
+            className="flex items-center gap-2 px-8 py-4 border border-border text-foreground font-semibold rounded-full hover:bg-secondary/50 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Download className="w-4 h-4" />
+            Resume
+          </motion.a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex justify-center gap-4 mt-8"
+        >
+          <motion.a
+            href="https://github.com/ylokhande2003"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+            whileHover={{ scale: 1.1, y: -2 }}
+          >
+            <Github className="w-5 h-5" />
+          </motion.a>
+          <motion.a
+            href="https://www.linkedin.com/in/yash-lokhande-34a313227/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="w-11 h-11 rounded-full glass-card flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+            whileHover={{ scale: 1.1, y: -2 }}
+          >
+            <Linkedin className="w-5 h-5" />
           </motion.a>
         </motion.div>
       </div>

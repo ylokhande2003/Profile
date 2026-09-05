@@ -8,16 +8,16 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { number: "1+", label: "Years Experience" },
-    { number: "250+", label: "Problems Solved on LeetCode" },
-    { number: "100", label: "Days Coding Challenge" },
+    { number: "2+", label: "Years Experience" },
+    { number: "500+", label: "Problems Solved on LeetCode" },
+    { number: "7.9", label: "CGPA (B.Tech CSE)" },
   ];
 
   const achievements = [
     {
       icon: Award,
-      title: "Best Employee Award",
-      description: "Outstanding performance and contribution to company success",
+      title: "Best Employee Award — 2025",
+      description: "Recognised at CoReCo Technologies for full-stack ownership, microservice delivery, and measurable production impact",
     },
     {
       icon: Trophy,
@@ -26,8 +26,8 @@ const About = () => {
     },
     {
       icon: Code,
-      title: "250+ Coding Problems",
-      description: "Solved across various competitive coding platforms",
+      title: "500+ Coding Problems",
+      description: "Solved across arrays, graphs, DP, trees, SQL & sliding window patterns — strong DSA foundation in Java and JavaScript",
     },
   ];
 
@@ -58,12 +58,12 @@ const About = () => {
                   <h3 className="font-heading text-2xl font-bold text-foreground">
                     Yash Lokhande
                   </h3>
-                  <p className="text-muted-foreground">Software Developer</p>
+                  <p className="text-muted-foreground">Full Stack Developer</p>
                   <p className="text-sm text-muted-foreground mt-1">
-                    B.Tech in Computer Science Engineering
+                    B.Tech in Computer Science Engineering — CGPA 7.9/10
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    Marathwada Institute of Technology (2020-2024)
+                    Marathwada Institute of Technology, Aurangabad (2020-2024)
                   </p>
                 </div>
               </div>
@@ -96,16 +96,20 @@ const About = () => {
               <span className="text-gradient">scalable solutions</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              I'm an Associate Software Engineer at CORECO, working across the full stack 
-              with hands-on experience in Java Spring Boot, React.js, and REST API integration. 
-              I've participated in sprint planning, daily stand-ups, and code reviews, 
-              continuously learning agile best practices.
+              I'm a results-driven Full Stack Developer with 2 years of experience designing,
+              building, and deploying scalable web applications across the MERN stack
+              (MongoDB, Express.js, React.js, Node.js) and Java Spring Boot ecosystems.
+              I've shipped production-grade features — including a multi-tenant
+              microservices platform, an end-to-end AI-powered content pipeline, and
+              high-performance REST APIs — for an enterprise B2B SaaS product serving
+              multiple clients.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Previously as a Software Engineer Intern, I worked on React.js projects, 
-              adding new functionalities and improving website responsiveness. I collaborate 
-              with senior developers to design and develop software features while contributing 
-              ideas for product and process improvements.
+              I'm skilled in building responsive React.js and Next.js frontends, designing
+              secure JWT-authenticated REST APIs, optimising SQL and NoSQL databases, and
+              managing Docker-based CI/CD deployments on cloud infrastructure. I thrive in
+              Agile/Scrum teams alongside Product, QA, and UI/UX, and I'm looking for
+              full-stack or backend engineering roles at product- or service-based companies.
             </p>
 
             {/* Stats */}

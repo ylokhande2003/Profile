@@ -10,23 +10,33 @@ const Projects = () => {
 
   const clientProjects = [
     {
-      title: "UpTroop - AI-Powered Training Platform",
-      description: "Developed and maintained multiple Java Spring Boot microservices and built core Next.js frontend modules. Managed Azure deployments, CI/CD pipelines, environment configurations, and production monitoring for reliable and scalable releases.",
-      tags: ["Next.js", "SQL", "Java Spring Boot", "Azure", "Python"],
+      title: "UpTroop — AI-Powered B2B SaaS Enterprise Learning Platform",
+      description:
+        "Multi-tenant B2B SaaS platform serving 4–10 enterprise clients. Re-architected the Slack & Microsoft Teams bot infrastructure from single-tenant to schema-based multi-tenancy with dynamic credential resolution and per-client Azure Blob Storage partitioning — zero cross-tenant data exposure. Engineered an end-to-end AI content pipeline integrating 6+ third-party REST APIs (avatar generation, multilingual TTS, video generation) with async processing, cutting trainer content production time by ~60%. Improved PostgreSQL API response times by 30% (800ms → 560ms) via query profiling and composite indexing.",
+      tags: ["Java", "Spring Boot", "React.js", "Next.js", "TypeScript", "PostgreSQL", "MongoDB", "Docker", "Azure"],
       color: "from-blue-500/20 to-purple-500/20",
-      type: "Client Project",
+      type: "Enterprise SaaS Platform",
     },
   ];
 
   const personalProjects = [
     {
-      title: "Animal Safety",
+      title: "Tweetertube",
       description:
-        "A web platform focused on animal welfare, including animal shelters, food, medication, and adoption services. Provides medication recommendations based on animal type, physical condition, and health needs.",
-      tags: ["HTML", "CSS", "JavaScript", "Web Development"],
-      color: "from-green-500/20 to-emerald-500/20",
-      githublink: "https://github.com/ylokhande2003/Animal_safety",
-      link: "https://github.com/ylokhande2003/Animal_safety",
+        "MERN stack social platform with tweets, video subscriptions, nested comments, and personalised feeds. MongoDB aggregation pipelines with compound indexing handle 50K+ document reads at sub-100ms response times. Secure REST API layer with JWT auth, RBAC, and rate limiting — containerised with Docker and deployed via CI/CD.",
+      tags: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Docker"],
+      color: "from-orange-500/20 to-red-500/20",
+      githublink: "https://github.com/ylokhande2003/Tweetertube",
+      link: "https://tweetertube.netlify.app/",
+    },
+    {
+      title: "Spring Boot E-Commerce REST API",
+      description:
+        "Scalable RESTful e-commerce API with product, order, inventory, and user management modules using clean MVC architecture and Hibernate/JPA. JWT auth with Spring Security, role-based access for customer/admin/vendor, and OAuth 2.0 login. Packaged with Maven, containerised with Docker, deployed to AWS EC2. 80%+ test coverage with JUnit & Mockito, Swagger/OpenAPI documentation.",
+      tags: ["Java", "Spring Boot", "Spring Security", "MySQL", "Docker", "AWS EC2"],
+      color: "from-purple-500/20 to-violet-500/20",
+      githublink: "https://github.com/ylokhande2003/springboot-ecommerce",
+      link: "https://github.com/ylokhande2003/springboot-ecommerce",
     },
     {
       title: "Atmayoga - Yoga & Wellness Platform",
@@ -38,13 +48,13 @@ const Projects = () => {
       link: "http://atmayoga.free.nf/?i=1",
     },
     {
-      title: "Tweetertube",
+      title: "Animal Safety",
       description:
-        "A full-stack application inspired by Twitter and YouTube, implementing CRUD operations and user authentication. Backend deployed on Render and frontend hosted on Netlify.",
-      tags: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "Axios"],
-      color: "from-orange-500/20 to-red-500/20",
-      githublink: "https://github.com/ylokhande2003/Tweetertube",
-      link: "https://tweetertube.netlify.app/",
+        "A web platform focused on animal welfare, including animal shelters, food, medication, and adoption services. Provides medication recommendations based on animal type, physical condition, and health needs.",
+      tags: ["HTML", "CSS", "JavaScript", "Web Development"],
+      color: "from-green-500/20 to-emerald-500/20",
+      githublink: "https://github.com/ylokhande2003/Animal_safety",
+      link: "https://github.com/ylokhande2003/Animal_safety",
     },
     {
       title: "Movie Library",
@@ -60,17 +70,30 @@ const Projects = () => {
 
   const experience = [
     {
-      role: "Associate Software Engineer",
-      company: "CORECO",
-      period: "March 2025 – Present",
-      description: "Working across the full stack with Java Spring Boot, backend development, and REST API integration. Participating in sprint planning, daily stand-ups, and review meetings. Collaborating with senior developers through code reviews and architectural discussions.",
+      role: "Associate Software Developer (Full-Time)",
+      company: "CoReCo Technologies Pvt Ltd · Pune, India",
+      period: "Feb 2025 – Present",
+      bullets: [
+        "Developed and maintained multiple Java Spring Boot microservices for a multi-tenant B2B SaaS platform serving 4–10 active enterprise clients — designed REST API contracts and business logic layers.",
+        "Re-architected the Slack & Microsoft Teams bot infrastructure to a schema-based multi-tenant architecture with dynamic credential resolution and per-client Azure Blob Storage partitioning.",
+        "Engineered an end-to-end AI content pipeline integrating 6+ third-party REST APIs with async processing — reduced enterprise trainer content production time by ~60%.",
+        "Built and optimised React.js/Next.js modules with TypeScript, Zustand & Redux Toolkit, maintaining Lighthouse scores above 85 and sub-200ms UI interactions.",
+        "Improved PostgreSQL API response times by 30% (800ms → 560ms) across 3 high-traffic endpoints via query profiling and composite indexing.",
+        "Implemented JWT authentication and RBAC across Spring Boot & Node.js APIs; wrote JUnit tests and ran JMeter load tests at 500 concurrent users, resolving 3 production-blocking bottlenecks.",
+      ],
       color: "from-violet-500/20 to-pink-500/20",
     },
     {
-      role: "Software Engineer Intern",
-      company: "CORECO",
-      period: "July 2024 – Feb 2025",
-      description: "Worked on React.js projects, adding new functionalities and improving website responsiveness. Collaborated with senior developers to design and develop software features. Participated in team meetings and contributed ideas for improvements.",
+      role: "Software Engineering Intern",
+      company: "CoReCo Technologies Pvt Ltd · Pune, India",
+      period: "Jul 2024 – Jan 2025",
+      bullets: [
+        "Designed and implemented JWT-based authentication and RBAC in Spring Boot, establishing the API security layer used across all platform endpoints.",
+        "Shipped a reusable React.js + Ant Design + Tailwind CSS component library, adopted across 4+ platform modules — reducing UI development time for the team.",
+        "Architected initial Slack & Microsoft Teams bot REST integrations that became the foundation for the multi-tenant architecture shipped in the full-time role.",
+        "Delivered REST API integrations for AI content features: multimedia slide generation, quiz engine, Markdown editor, and initial LLM-based content hooks.",
+        "Debugged and resolved 15+ critical bugs in production REST APIs and frontend validation flows, unblocking QA sign-off on two major release milestones.",
+      ],
       color: "from-cyan-500/20 to-blue-500/20",
     },
   ];
@@ -108,17 +131,27 @@ const Projects = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Briefcase className="w-6 h-6 text-primary" />
                     </div>
-                    <div>
-                      <h3 className="font-heading text-xl font-bold text-foreground">
-                        {exp.role}
-                      </h3>
-                      <p className="text-primary font-medium">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        {exp.period}
-                      </p>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {exp.description}
-                      </p>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                        <h3 className="font-heading text-xl font-bold text-foreground">
+                          {exp.role}
+                        </h3>
+                        <span className="text-sm text-muted-foreground whitespace-nowrap">
+                          {exp.period}
+                        </span>
+                      </div>
+                      <p className="text-primary font-medium mb-3">{exp.company}</p>
+                      <ul className="space-y-2">
+                        {exp.bullets.map((bullet, i) => (
+                          <li
+                            key={i}
+                            className="text-muted-foreground leading-relaxed text-sm flex gap-2"
+                          >
+                            <span className="text-primary mt-1.5 flex-shrink-0">▸</span>
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
